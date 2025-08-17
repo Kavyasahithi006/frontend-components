@@ -1,69 +1,29 @@
-# React + TypeScript + Vite
+# Frontend Components Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React + TypeScript frontend setup with TailwindCSS, Storybook, and Jest testing.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
+- [React + Vite + TypeScript](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/)
+- [Jest + React Testing Library](https://testing-library.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📘 Assignment Deliverables
 
-## Expanding the ESLint configuration
+### Components
+- **InputField** (with validation states, variants, sizes, accessibility, tests, Storybook stories)
+- **DataTable** (with sorting, selection, loading & empty states, tests, Storybook stories)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Demo
+- `DemoPage.tsx` shows how components are combined into a simple form.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Storybook Preview
+You can run Storybook locally with:
+```bash
+npm run storybook
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Installation
+```bash
+git clone https://github.com/Kavyasahithi@006/frontend-components.git
+cd frontend-components
+npm install
